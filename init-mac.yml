@@ -1,0 +1,29 @@
+- hosts: localhost
+  become: false
+  pre_tasks:
+    - import_tasks: ./pretasks/macos-brew.yml
+  tasks:
+    - import_tasks: ./tasks/mac/zsh.yml
+    - import_tasks: ./tasks/mac/dotfiles.yml
+    - import_tasks: ./tasks/mac/act.yml
+    - import_tasks: ./tasks/mac/clickhouse.yml
+    - import_tasks: ./tasks/mac/font-meslo.yml
+    - import_tasks: ./tasks/mac/golang.yml
+    - import_tasks: ./tasks/mac/gh.yml
+    - import_tasks: ./tasks/mac/gcloud.yml
+    - import_tasks: ./tasks/mac/httpie.yml
+    - import_tasks: ./tasks/mac/neovim.yml
+    - import_tasks: ./tasks/mac/orbstack.yml
+    - import_tasks: ./tasks/mac/raycast.yml
+    - import_tasks: ./tasks/mac/yabai.yml
+    - import_tasks: ./tasks/mac/productivity.yml
+    - import_tasks: ./tasks/mac/tmux.yml
+    - import_tasks: ./tasks/mac/skhd.yml
+    - import_tasks: ./tasks/universal/kitty.yml
+    - import_tasks: ./tasks/universal/turso.yml
+    - import_tasks: ./tasks/universal/fly.yml
+    - import_tasks: ./tasks/universal/python.yml
+    - import_tasks: ./tasks/universal/rust.yml
+    - import_tasks: ./tasks/universal/fnm.yml
+    - import_tasks: ./tasks/universal/pnpm.yml
+    - import_tasks: ./tasks/universal/bun.yml

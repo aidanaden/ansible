@@ -1,0 +1,8 @@
+- name: Install act
+  homebrew_cask:
+    name: act
+    state: present
+    update_homebrew: true
+  tags:
+    - install
+    - act

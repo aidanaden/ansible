@@ -1,0 +1,13 @@
+- name: Install gh
+  homebrew:
+    name: gh
+    state: present
+    update_homebrew: true
+  tags:
+    - install
+    - gh
+- name: Install gh-dash
+  shell: gh extension install dlvhdr/gh-dash
+  tags:
+    - install
+    - gh

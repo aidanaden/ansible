@@ -1,0 +1,8 @@
+- name: Install clickhouse
+  homebrew_cask:
+    name: clickhouse
+    state: present
+    update_homebrew: true
+  tags:
+    - install
+    - clickhouse

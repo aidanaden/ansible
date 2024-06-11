@@ -1,0 +1,20 @@
+- name: Add & Install github-cli via apt
+  block:
+    - name: Add github-cli gpg key
+      ansible.builtin.get_url:
+        url: https://cli.github.com/packages/githubcli-archive-keyring.gpg
+        dest: /etc/apt/keyrings/githubcli-archive-keyring.gpg
+    - name: Add github-cli apt source
+      ansible.builtin.apt_repository:
+        repo: "deb [arch=amd64 signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main"
+        state: present
+        update_cache: true
+    - name: Install github-cli
+      apt:
+        name: ["gh"]
+        update_cache: true
+    - name: Install gh-dash extension
+      shell: gh extension install dlvhdr/gh-dash
+  tags:
+    - install
+    - gh

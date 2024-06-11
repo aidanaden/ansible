@@ -1,0 +1,9 @@
+- name: Install font-meslo-lg-nerd-font
+  homebrew:
+    name: font-meslo-lg-nerd-font
+    state: present
+    update_homebrew: true
+  tags:
+    - install
+    - brew
+    - font-meslo

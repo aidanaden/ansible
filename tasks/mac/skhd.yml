@@ -1,0 +1,8 @@
+- name: Install skhd
+  homebrew:
+    name: koekeishiya/formulae/skhd
+    state: present
+    update_homebrew: true
+  tags:
+    - install
+    - skhd

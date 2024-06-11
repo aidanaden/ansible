@@ -1,0 +1,31 @@
+- name: Remove old neovim
+  shell: rm -rf /opt/nvim
+  tags:
+    - install
+    - neovim
+- name: Download neovim from releases
+  shell: curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+  tags:
+    - install
+    - neovim
+- name: Extract neovim
+  shell: tar -C /opt -xzf nvim-linux64.tar.gz
+  tags:
+    - install
+    - neovim
+- name: Remove neovim tar
+  shell: rm -rf nvim-linux64.tar.gz
+  tags:
+    - install
+    - neovim
+- name: Add neovim to zshrc
+  ansible.builtin.blockinfile:
+    path: ~/.zshrc
+    marker: "# {mark} neovim"
+    prepend_newline: true
+    append_newline: true
+    block: |
+      export PATH="$PATH:/opt/nvim-linux64/bin"
+  tags:
+    - install
+    - neovim

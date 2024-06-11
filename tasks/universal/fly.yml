@@ -1,0 +1,5 @@
+- name: Install flyctl
+  shell: curl -L https://fly.io/install.sh | sh
+  tags:
+    - install
+    - fly

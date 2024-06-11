@@ -1,0 +1,8 @@
+- name: Install golang
+  homebrew:
+    name: go
+    state: present
+    update_homebrew: true
+  tags:
+    - golang
+    - brew

@@ -1,0 +1,8 @@
+- name: Install orbstack
+  homebrew:
+    name: orbstack
+    state: present
+    update_homebrew: true
+  tags:
+    - orbstack
+    - brew

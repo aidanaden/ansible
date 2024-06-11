@@ -1,0 +1,12 @@
+- name: Install bison
+  apt:
+    name: ["bison", "golang-go"]
+  tags:
+    - install
+    - golang
+- name: Install gvm
+  become: true
+  shell: curl -sSL https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer | /bin/bash
+  tags:
+    - install
+    - golang

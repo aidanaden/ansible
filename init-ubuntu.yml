@@ -1,0 +1,30 @@
+- hosts: localhost
+  become: true
+  pre_tasks:
+    - name: Update cache
+      apt:
+        update_cache: true
+      tags:
+        - install
+    - include_tasks: ./pretasks/ubuntu-brew.yml
+  tasks:
+    - import_tasks: ./tasks/ubuntu/zsh.yml
+    - import_tasks: ./tasks/ubuntu/dotfiles.yml
+    - import_tasks: ./tasks/ubuntu/act.yml
+    - import_tasks: ./tasks/ubuntu/clickhouse.yml
+    - import_tasks: ./tasks/ubuntu/httpie.yml
+    - import_tasks: ./tasks/ubuntu/gh.yml
+    - import_tasks: ./tasks/ubuntu/golang.yml
+    - import_tasks: ./tasks/ubuntu/docker.yml
+    - import_tasks: ./tasks/ubuntu/gcloud.yml
+    - import_tasks: ./tasks/ubuntu/neovim.yml
+    - import_tasks: ./tasks/ubuntu/productivity.yml
+    - import_tasks: ./tasks/ubuntu/tmux.yml
+    - import_tasks: ./tasks/universal/kitty.yml
+    - import_tasks: ./tasks/universal/turso.yml
+    - import_tasks: ./tasks/universal/fly.yml
+    - import_tasks: ./tasks/universal/python.yml
+    - import_tasks: ./tasks/universal/rust.yml
+    - import_tasks: ./tasks/universal/fnm.yml
+    - import_tasks: ./tasks/universal/pnpm.yml
+    - import_tasks: ./tasks/universal/bun.yml

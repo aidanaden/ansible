@@ -1,0 +1,6 @@
+- name: Install pnpm
+  # add "|| /bin/true" to ensure always pass since `pnpm setup`
+  # (which is automatically run in the install.sh script) will never work
+  shell: curl -fsSL https://get.pnpm.io/install.sh | sh - || /bin/true
+  tags:
+    - pnpm

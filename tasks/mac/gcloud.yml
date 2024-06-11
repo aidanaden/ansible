@@ -1,0 +1,25 @@
+- name: Remove old gcloud
+  shell: chdir=$HOME rm -rf $HOME/google-cloud-sdk
+  tags:
+    - install
+    - gcloud
+- name: Download gcloud
+  shell: chdir=$HOME curl -LO https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-479.0.0-darwin-arm.tar.gz
+  tags:
+    - install
+    - gcloud
+- name: Extract gcloud
+  shell: chdir=$HOME tar -xzf google-cloud-cli-479.0.0-darwin-arm.tar.gz
+  tags:
+    - install
+    - gcloud
+- name: Install gcloud
+  shell: chdir=$HOME ./google-cloud-sdk/install.sh -q
+  tags:
+    - install
+    - gcloud
+- name: Remove gcloud tar
+  shell: chdir=$HOME rm -rf google-cloud-cli-479.0.0-darwin-arm.tar.gz
+  tags:
+    - install
+    - gcloud

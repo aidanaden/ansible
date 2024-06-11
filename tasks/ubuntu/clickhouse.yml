@@ -1,0 +1,28 @@
+- name: Install clickhouse deps
+  become: true
+  apt:
+    name: ["apt-transport-https", "ca-certificates", "curl", "gnupg"]
+    update_cache: true
+  tags:
+    - install
+    - clickhouse
+- name: Add clickhouse gpg key
+  shell: curl -fsSL 'https://packages.clickhouse.com/rpm/lts/repodata/repomd.xml.key' | gpg --dearmor -o /usr/share/keyrings/clickhouse-keyring.gpg
+  become: true
+  tags:
+    - install
+    - clickhouse
+- name: Add clickhouse deb to apt source
+  shell: echo "deb [signed-by=/usr/share/keyrings/clickhouse-keyring.gpg] https://packages.clickhouse.com/deb stable main" | tee /etc/apt/sources.list.d/clickhouse.list
+  become: true
+  tags:
+    - install
+    - clickhouse
+- name: Install clickhouse
+  become: true
+  apt:
+    name: ["clickhouse-server", "clickhouse-client"]
+    update_cache: true
+  tags:
+    - install
+    - clickhouse

@@ -1,0 +1,10 @@
+- name: Install act
+  homebrew:
+    name: act
+    state: present
+    update_homebrew: true
+    path: "/home/linuxbrew/.linuxbrew/bin"
+  tags:
+    - install
+    - brew
+    - act

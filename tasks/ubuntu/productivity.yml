@@ -1,0 +1,9 @@
+- name: Install productivity packages (fzf, tldr, git, curl)
+  become: true
+  apt:
+    # name: ["tmux", "fzf", "tldr", "git", "curl", "wireguard", "jq"]
+    name: ["bash", "fzf", "tldr", "git", "curl", "jq", "bc"]
+    update_cache: true
+  tags:
+    - install
+    - productivity

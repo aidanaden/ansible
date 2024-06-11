@@ -1,0 +1,10 @@
+- name: Install pyenv
+  shell: curl https://pyenv.run | bash
+  tags:
+    - install
+    - python
+- name: Install uv
+  shell: curl -LsSf https://astral.sh/uv/install.sh | sh
+  tags:
+    - install
+    - python

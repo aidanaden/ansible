@@ -1,0 +1,4 @@
+- name: Install fnm
+  shell: curl -fsSL https://fnm.vercel.app/install | bash
+  tags:
+    - fnm

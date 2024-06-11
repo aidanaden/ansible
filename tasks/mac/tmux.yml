@@ -1,0 +1,8 @@
+- name: Install tmux
+  homebrew:
+    name: ["tmux"]
+    state: present
+    update_homebrew: true
+  tags:
+    - install
+    - tmux
