@@ -1,0 +1,28 @@
+- name: Install eza deps
+  become: true
+  apt:
+    name: ["gpg", "curl"]
+    update_cache: true
+  tags:
+    - install
+    - eza
+- name: Add eza gpg key
+  shell: curl -fsSL 'https://packages.eza.com/rpm/lts/repodata/repomd.xml.key' | gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+  become: true
+  tags:
+    - install
+    - eza
+- name: Add eza deb to apt source
+  shell: echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | tee /etc/apt/sources.list.d/gierens.list
+  become: true
+  tags:
+    - install
+    - eza
+- name: Install eza
+  become: true
+  apt:
+    name: ["eza"]
+    update_cache: true
+  tags:
+    - install
+    - eza

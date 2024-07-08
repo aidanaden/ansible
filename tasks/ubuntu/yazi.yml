@@ -1,0 +1,9 @@
+- name: Install yazi
+  homebrew:
+    name: ["yazi", "ffmpegthumbnailer", "unar", "jq", "poppler", "fd", "ripgrep", "fzf", "zoxide", "font-symbols-only-nerd-font"]
+    state: present
+    update_homebrew: true
+  tags:
+    - install
+    - brew
+    - yazi

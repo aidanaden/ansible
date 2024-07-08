@@ -1,6 +1,6 @@
-- name: Install productivity tools (fzf, git, tldr, jq)
+- name: Install productivity tools (fzf, git, tldr, jq, bat, git-delta)
   homebrew:
-    name: ["bash", "fzf", "tldr", "git", "jq", "bc"]
+    name: ["bash", "fzf", "tldr", "git", "jq", "bc", "git-delta", "eza", "btop", "fastfetch"]
     state: present
     update_homebrew: true
   tags:

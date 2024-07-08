@@ -10,7 +10,8 @@
   tasks:
     - import_tasks: ./tasks/ubuntu/zsh.yml
     - import_tasks: ./tasks/ubuntu/dotfiles.yml
-    - import_tasks: ./tasks/ubuntu/act.yml
+    # - import_tasks: ./tasks/ubuntu/act.yml
+    - import_tasks: ./tasks/ubuntu/btop.yml
     - import_tasks: ./tasks/ubuntu/clickhouse.yml
     - import_tasks: ./tasks/ubuntu/httpie.yml
     - import_tasks: ./tasks/ubuntu/gh.yml
@@ -19,7 +20,11 @@
     - import_tasks: ./tasks/ubuntu/gcloud.yml
     - import_tasks: ./tasks/ubuntu/neovim.yml
     - import_tasks: ./tasks/ubuntu/productivity.yml
+    - import_tasks: ./tasks/ubuntu/fastfetch.yml
     - import_tasks: ./tasks/ubuntu/tmux.yml
+    - import_tasks: ./tasks/ubuntu/bat.yml
+    - import_tasks: ./tasks/ubuntu/delta.yml
+    - import_tasks: ./tasks/ubuntu/yazi.yml
     - import_tasks: ./tasks/universal/kitty.yml
     - import_tasks: ./tasks/universal/turso.yml
     - import_tasks: ./tasks/universal/fly.yml
@@ -28,3 +33,4 @@
     - import_tasks: ./tasks/universal/fnm.yml
     - import_tasks: ./tasks/universal/pnpm.yml
     - import_tasks: ./tasks/universal/bun.yml
+    - import_tasks: ./tasks/ubuntu/eza.yml

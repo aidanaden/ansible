@@ -1,0 +1,10 @@
+- name: Install delta
+  homebrew:
+    name: git-delta
+    state: present
+    update_homebrew: true
+    path: "/home/linuxbrew/.linuxbrew/bin"
+  tags:
+    - install
+    - brew
+    - delta

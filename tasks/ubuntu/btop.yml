@@ -1,0 +1,10 @@
+- name: Install btop
+  homebrew:
+    name: btop
+    state: present
+    update_homebrew: true
+    path: "/home/linuxbrew/.linuxbrew/bin"
+  tags:
+    - install
+    - brew
+    - btop

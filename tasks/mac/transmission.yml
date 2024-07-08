@@ -1,0 +1,8 @@
+- name: Install transmission
+  homebrew:
+    name: ["transmission"]
+    state: present
+    update_homebrew: true
+  tags:
+    - install
+    - transmission

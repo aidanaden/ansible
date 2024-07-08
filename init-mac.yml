@@ -18,7 +18,10 @@
     - import_tasks: ./tasks/mac/yabai.yml
     - import_tasks: ./tasks/mac/productivity.yml
     - import_tasks: ./tasks/mac/tmux.yml
+    - import_tasks: ./tasks/mac/bat.yml
     - import_tasks: ./tasks/mac/skhd.yml
+    - import_tasks: ./tasks/mac/transmission.yml
+    - import_tasks: ./tasks/mac/yazi.yml
     - import_tasks: ./tasks/universal/kitty.yml
     - import_tasks: ./tasks/universal/turso.yml
     - import_tasks: ./tasks/universal/fly.yml

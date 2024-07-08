@@ -1,0 +1,16 @@
+- name: Install bat
+  become: true
+  apt:
+    name: ["bat"]
+    update_cache: true
+  tags:
+    - install
+    - bat
+- name: Setup bat theme
+  shell: |
+    mkdir -p $HOME/.config/bat/themes
+    cd $HOME/.config/bat/themes
+    curl -O https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/sublime/tokyonight_night.tmTheme
+  tags:
+    - install
+    - bat
