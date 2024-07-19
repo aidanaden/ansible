@@ -1,6 +1,6 @@
 - name: Install mpv
-  homebrew:
-    name: ["mpv"]
+  homebrew_cask:
+    name: mpv
     state: present
     update_homebrew: true
   tags:
