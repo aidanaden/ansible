@@ -16,6 +16,7 @@
     - import_tasks: ./tasks/mac/orbstack.yml
     - import_tasks: ./tasks/mac/raycast.yml
     - import_tasks: ./tasks/mac/yabai.yml
+    - import_tasks: ./tasks/mac/mpv.yml
     - import_tasks: ./tasks/mac/productivity.yml
     - import_tasks: ./tasks/mac/tmux.yml
     - import_tasks: ./tasks/mac/bat.yml

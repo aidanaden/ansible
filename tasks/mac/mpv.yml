@@ -1,0 +1,8 @@
+- name: Install mpv
+  homebrew:
+    name: ["mpv"]
+    state: present
+    update_homebrew: true
+  tags:
+    - install
+    - mpv
